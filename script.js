@@ -1,5 +1,5 @@
 const boxElements = document.getElementsByClassName("box");
-const gameStatus = document.getElementById("game-status");
+const gameStatusEl = document.getElementById("game-status");
 let turn = 0; let turnSequence = [];
 const turnX = "X", turnO = "O";
 //let firstPlayer;
@@ -38,26 +38,27 @@ function handleClick(e) {
   //     case turnSequence[0] === turnSequence[1] && turnSequence[1] === turnSequence[2]:
   //     case turnSequence[0] === turnSequence[3] && turnSequence[3] === turnSequence[6]:
   //     case turnSequence[0] === turnSequence[4] && turnSequence[4] === turnSequence[8]:
-  //       gameStatus.textContent = "Player " + turnSequence[0] + " Wins";
+  //       gameStatusEl.textContent = "Player " + turnSequence[0] + " Wins";
   //       break;
   //     case turnSequence[1] === turnSequence[4] && turnSequence[4] === turnSequence[7]:
-  //       gameStatus.textContent = "Player " + turnSequence[1] + " Wins";
+  //       gameStatusEl.textContent = "Player " + turnSequence[1] + " Wins";
   //       break;
   //     case turnSequence[2] === turnSequence[4] && turnSequence[4] === turnSequence[6]:
   //     case turnSequence[2] === turnSequence[5] && turnSequence[5] === turnSequence[8]:
-  //       gameStatus.textContent = "Player " + turnSequence[2] + " Wins";
+  //       gameStatusEl.textContent = "Player " + turnSequence[2] + " Wins";
   //       break;
   //     case turnSequence[3] === turnSequence[4] && turnSequence[4] === turnSequence[5]:
-  //       gameStatus.textContent = "Player " + turnSequence[3] + " Wins";
+  //       gameStatusEl.textContent = "Player " + turnSequence[3] + " Wins";
   //       break;
   //     case turnSequence[6] === turnSequence[7] && turnSequence[7] === turnSequence[8]:
-  //       gameStatus.textContent = "Player " + turnSequence[6] + " Wins";
+  //       gameStatusEl.textContent = "Player " + turnSequence[6] + " Wins";
   //   }
 
   // }
   if (turn >= 9) {
-    gameStatus.textContent = "Game over!"
+    gameStatusEl.textContent = "Game over!"
   }
+  targetElement.removeEventListener("click", handleClick);
 
 }
 
@@ -65,7 +66,7 @@ const playButton = document.getElementById("play");
 
 playButton.addEventListener("click", function () {
   playButton.classList.add("hide");
-  gameStatus.textContent = "Game started";
+  gameStatusEl.textContent = "Game started";
   for (let el of boxElements) {
     // console.log(el);
     el.addEventListener("mouseover", handleMouseOver);

@@ -2,21 +2,17 @@ body{
   background-color: #41576d;
   text-align: center;
   font-family: Helvetica;
-}
-
-h1, h2{
   color: #fff;
-
 }
-
 
 .button{
   box-sizing: border-box;
   width: 150px;
   height: 70px;
   padding: 15px 10px;
-  background-color: azure;
-  border: 1px solid #bddcfa;
+  background-color: rgb(113, 137, 163);
+  border: 1px solid #74889c;
+  color: rgb(233, 236, 243);
   border-radius: 5px;
   margin: 0 auto;
   font-size: 1.5em;
@@ -28,8 +24,7 @@ h1, h2{
 	height: 600px;
 	margin: 0 auto;
   background-color: #34495e;
-  color: #fff;
-  border: 6px solid #2c3e50;
+ border: 6px solid #2c3e50;
   border-radius: 10px;
 	
 	display: grid;

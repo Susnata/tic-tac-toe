@@ -1,51 +1,46 @@
 body{
   background-color: #41576d;
   text-align: center;
-  font-family: Helvetica;
   color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  
 }
 
 .button{
-  box-sizing: border-box;
   width: 150px;
-  height: 70px;
-  padding: 15px 10px;
+  height: 50px;
   background-color: rgb(113, 137, 163);
   border: 1px solid #74889c;
   color: rgb(233, 236, 243);
-  border-radius: 5px;
-  margin: 0 auto;
   font-size: 1.5em;
+  border-radius: 5px;
+ 
 }
 
-#game-board
-{
-	width: 600px;
-	height: 600px;
-	margin: 0 auto;
+#game-board{
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
   background-color: #34495e;
- border: 6px solid #2c3e50;
+  border: 6px solid #2c3e50;
+  display: grid;
+  grid-template-columns: auto auto auto;
   border-radius: 10px;
-	
-	display: grid;
-	grid-template: repeat(3, 1fr) / repeat(3, 1fr);
 }
 
-.box
-{
+.box{
+  box-sizing: border-box;
   border: 6px solid #2c3e50;
-  border-radius: 2px;
-  font-weight: bold;
   font-size: 4em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 50px;
+  width: 200px;
+  height: 200px;
 }
 
 .show{
   opacity: 0.2;
 }
+
 .hide{
   display: none;
 }
-
